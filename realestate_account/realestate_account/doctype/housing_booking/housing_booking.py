@@ -4,8 +4,8 @@
 # import frappe
 from frappe.model.document import Document
 
-	class HousingBooking(Document):
-		pass
+class HousingBooking(Document):
+	pass
 	
 	
 
