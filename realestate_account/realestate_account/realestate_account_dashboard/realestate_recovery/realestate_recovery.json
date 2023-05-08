@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Realestate Projects"
+  },
+  {
+   "card": "Plot Count"
+  },
+  {
+   "card": "Total Sales Amount"
+  },
+  {
+   "card": "Total Realestate Payment"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Due Amount Installment Wise ( Today )",
+   "width": "Full"
+  },
+  {
+   "chart": "Payment Collection",
+   "width": "Half"
+  },
+  {
+   "chart": "Payment Method",
+   "width": "Half"
+  },
+  {
+   "chart": "Due % Project Wise",
+   "width": "Full"
+  }
+ ],
+ "creation": "2023-03-14 17:08:03.152628",
+ "dashboard_name": "Realestate Recovery",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-05-08 15:33:11.567172",
+ "modified_by": "prasantpant141@gmail.com",
+ "module": "Realestate Account",
+ "name": "Realestate Recovery",
+ "owner": "Administrator"
+}

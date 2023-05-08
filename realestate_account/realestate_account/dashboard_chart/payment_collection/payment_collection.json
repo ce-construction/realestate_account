@@ -1,0 +1,36 @@
+{
+ "based_on": "payment_date",
+ "chart_name": "Payment Collection",
+ "chart_type": "Sum",
+ "creation": "2023-03-13 18:05:01.004359",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Customer Payment Realestate",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2023-05-08 14:48:48.739178",
+ "modified": "2023-05-08 15:28:10.944697",
+ "modified_by": "prasantpant141@gmail.com",
+ "module": "Realestate Account",
+ "name": "Payment Collection",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "roles": [
+  {
+   "role": "Realestate Account Manager"
+  }
+ ],
+ "source": "",
+ "time_interval": "Daily",
+ "timeseries": 1,
+ "timespan": "Last Quarter",
+ "type": "Line",
+ "use_report_chart": 0,
+ "value_based_on": "grand_total",
+ "y_axis": []
+}

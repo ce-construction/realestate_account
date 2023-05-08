@@ -1,0 +1,32 @@
+{
+ "chart_name": "Due Amount Installment Wise ( Today )",
+ "chart_type": "Report",
+ "creation": "2023-04-16 16:16:45.894990",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2023-05-08 15:27:55.475955",
+ "modified_by": "prasantpant141@gmail.com",
+ "module": "Realestate Account",
+ "name": "Due Amount Installment Wise ( Today )",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Remaning Amount Installment Wise",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "Installment",
+ "y_axis": [
+  {
+   "y_field": "Amount"
+  }
+ ]
+}
