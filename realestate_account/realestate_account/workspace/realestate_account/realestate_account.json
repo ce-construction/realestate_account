@@ -5,7 +5,7 @@
    "label": "Due % Project Wise"
   }
  ],
- "content": "[{\"id\":\"WECnLkKvso\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Real Estate Recovery Schedule</span>\",\"col\":12}},{\"id\":\"OP72ok_SKn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Realestate Account Dashboard\",\"col\":4}},{\"id\":\"DR7sls1hwy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Due % Project Wise\",\"col\":12}},{\"id\":\"TU9lpHl2Qf\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":3}},{\"id\":\"Kp-qrjuKTu\",\"type\":\"card\",\"data\":{\"card_name\":\"Entry\",\"col\":3}},{\"id\":\"TRtwI0NYxt\",\"type\":\"card\",\"data\":{\"card_name\":\"Recovery Schedule\",\"col\":3}},{\"id\":\"AlAlZSorj2\",\"type\":\"card\",\"data\":{\"card_name\":\"Summary Reports\",\"col\":3}},{\"id\":\"JMwjjUrj4i\",\"type\":\"card\",\"data\":{\"card_name\":\"Detailed Report\",\"col\":4}}]",
+ "content": "[{\"id\":\"WECnLkKvso\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Real Estate Plot / Unit Management System</span>\",\"col\":12}},{\"id\":\"OP72ok_SKn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Realestate Account Dashboard\",\"col\":4}},{\"id\":\"DR7sls1hwy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Due % Project Wise\",\"col\":12}},{\"id\":\"TU9lpHl2Qf\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":3}},{\"id\":\"Kp-qrjuKTu\",\"type\":\"card\",\"data\":{\"card_name\":\"Entry\",\"col\":3}},{\"id\":\"TRtwI0NYxt\",\"type\":\"card\",\"data\":{\"card_name\":\"Recovery Schedule\",\"col\":3}},{\"id\":\"AlAlZSorj2\",\"type\":\"card\",\"data\":{\"card_name\":\"Summary Reports\",\"col\":3}},{\"id\":\"JMwjjUrj4i\",\"type\":\"card\",\"data\":{\"card_name\":\"Detailed Report\",\"col\":4}}]",
  "creation": "2023-02-28 17:19:14.760606",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -177,7 +177,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-05-08 13:16:15.843686",
+ "modified": "2023-05-08 17:19:05.323038",
  "modified_by": "Administrator",
  "module": "Realestate Account",
  "name": "Realestate Account",
