@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:receipt_no",
+ "creation": "2023-03-02 12:01:58.064344",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_no",
+  "customer_name",
+  "payment_method",
+  "column_break_tykep",
+  "receipt_no",
+  "project_name",
+  "payment_date",
+  "column_break_pmh4i",
+  "total_paid_amount",
+  "plot_no",
+  "payment_date__nepali_",
+  "installment_division_section",
+  "installment",
+  "section_break_lzwtu",
+  "total_remaining_balance",
+  "column_break_dinlo",
+  "grand_total",
+  "section_break_avj8c",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "description": "Search with booking no or customer name or plot",
+   "fieldname": "booking_no",
+   "fieldtype": "Link",
+   "label": "Booking No",
+   "options": "Housing Booking",
+   "reqd": 1
+  },
+  {
+   "default": " ",
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer Realestate",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCheque\nOnline Transfer\nPIF",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tykep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Receipt no of actual bill",
+   "fieldname": "receipt_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Receipt No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Project Name",
+   "options": "Project",
+   "read_only": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pmh4i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "description": "Total received amount from customer",
+   "fieldname": "total_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid Amount",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Plot No",
+   "options": "Plot List",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Please enter date on dd-mm-yyyy format",
+   "fieldname": "payment_date__nepali_",
+   "fieldtype": "Data",
+   "label": "Payment Date ( Nepali ) dd-mm-yyyy",
+   "length": 10
+  },
+  {
+   "fieldname": "installment_division_section",
+   "fieldtype": "Section Break",
+   "label": "Installment Division"
+  },
+  {
+   "columns": 4,
+   "fieldname": "installment",
+   "fieldtype": "Table",
+   "label": "Installment",
+   "no_copy": 1,
+   "options": "Customer Payment Installment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_lzwtu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_remaining_balance",
+   "fieldtype": "Data",
+   "label": "Total Remaining Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dinlo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_avj8c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "max_height": "100px"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2023-05-08 13:16:51.382591",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Customer Payment Realestate",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Realestate Account Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:plot_name",
+ "creation": "2023-02-28 17:25:21.831630",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plot__unit__apartment_information_section",
+  "plot_name",
+  "project_name",
+  "column_break_5z8yo",
+  "plot_detail__type_",
+  "column_break_2pokw",
+  "direction",
+  "section01_section",
+  "land_area",
+  "super_area",
+  "column_break_aalmu",
+  "buildup_area",
+  "carpet_area"
+ ],
+ "fields": [
+  {
+   "fieldname": "plot__unit__apartment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Plot / Unit / Apartment Information"
+  },
+  {
+   "fieldname": "plot_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plot / Unit Name ",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Project Name",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5z8yo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plot_detail__type_",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Plot Detail ( Type )",
+   "options": "Housing\nApartment\nShop\nOffice Space"
+  },
+  {
+   "fieldname": "column_break_2pokw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "E\nW\nS\nNE\nSE\nNW\nSW\nN"
+  },
+  {
+   "fieldname": "section01_section",
+   "fieldtype": "Section Break",
+   "label": "Area"
+  },
+  {
+   "fieldname": "land_area",
+   "fieldtype": "Data",
+   "label": "Land Area"
+  },
+  {
+   "fieldname": "super_area",
+   "fieldtype": "Data",
+   "label": "Super Area"
+  },
+  {
+   "fieldname": "column_break_aalmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "buildup_area",
+   "fieldtype": "Data",
+   "label": "Buildup Area"
+  },
+  {
+   "fieldname": "carpet_area",
+   "fieldtype": "Data",
+   "label": "Carpet Area"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-08 12:32:10.457749",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Plot List",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_plot_list",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Realestate Account Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "project_name,plot_detail__type_",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

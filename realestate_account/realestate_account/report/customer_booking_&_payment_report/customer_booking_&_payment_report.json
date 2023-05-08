@@ -1,0 +1,87 @@
+{
+ "_liked_by": "[\"prasantpant141@gmail.com\"]",
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "width": 120
+  },
+  {
+   "fieldname": "date_bs",
+   "fieldtype": "Data",
+   "label": "Date (BS)",
+   "width": 120
+  },
+  {
+   "fieldname": "Particular",
+   "fieldtype": "Data",
+   "label": "Particular",
+   "width": 350
+  },
+  {
+   "fieldname": "receivable_amount",
+   "fieldtype": "Currency",
+   "label": "Receivable Amount",
+   "width": 150
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "width": 150
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "width": 150
+  }
+ ],
+ "creation": "2023-03-22 10:35:39.295650",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "mandatory": 1,
+   "options": "Customer Realestate",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Select",
+   "label": "Plot No",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"Housing Booking\"],[\"booking_no\",\"Housing Booking\"],[\"plot_no\",\"Housing Booking\"],[\"booking_date\",\"Housing Booking\"],[\"grand_total\",\"Housing Booking\"],[\"installment_total\",\"Housing Booking\"]],\"order_by\":\"`tabHousing Booking`.`modified` desc\",\"page_length\":20,\"column_widths\":{\"name\":120,\"booking_no\":120,\"plot_no\":120,\"booking_date\":120,\"grand_total\":120,\"installment_total\":120},\"group_by\":null}",
+ "letter_head": "CE Construction",
+ "modified": "2023-05-08 14:08:43.264363",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Customer Booking & Payment Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "with customer_details as  (\r\n    select a.date as engdate,a.date_nepali as nepali_date,CONCAT(b.plot_no, ' - ', a.installment)  as Particular ,a.amount as rec_amount,0 as paid_amount  from `tabInstallment Payment Plan` a inner join `tabHousing Booking` b on a.parent = b.name where client_name= %(customer_name)s \r\n    union\r\n    select d.payment_date as engdate,d.payment_date__nepali_ as nepali_date,CONCAT('Payment - ', d.plot_no,' - ', c.installment, ' - ', receipt_no)  as Particular,0 as rec_amount,c.paid_amount as paid_amount from `tabCustomer Payment Installment` c inner join `tabCustomer Payment Realestate` d on c.parent = d.name where customer_name = %(customer_name)s\r\n)\r\nselect *,(sum(rec_amount) OVER (ORDER BY engdate asc)) - (sum(paid_amount) OVER (ORDER BY engdate asc)) as balance from customer_details where (rec_amount + paid_amount) > 0 \r\nunion\r\nselect '','','Total',sum(rec_amount),sum(paid_amount),sum(rec_amount)-sum(paid_amount) from customer_details where (rec_amount + paid_amount) > 0 ",
+ "ref_doctype": "Housing Booking",
+ "report_name": "Customer Booking & Payment Report",
+ "report_script": "",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Realestate Account Manager"
+  }
+ ]
+}

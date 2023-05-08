@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{shortkey}-{booking_no}",
+ "creation": "2023-03-01 18:29:43.377635",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_information_section",
+  "booking_no",
+  "plot_no",
+  "client_name",
+  "column_break_tdph9",
+  "booking_date",
+  "booking_date__bs_",
+  "shortkey",
+  "column_break_1lkwt",
+  "handover_date",
+  "handover_date__bs_",
+  "booking_accounts_section",
+  "unit_cost",
+  "parking_cost",
+  "direction_premium_cost",
+  "column_break_faac9",
+  "paint_premium_cost",
+  "total_cost",
+  "_discount_on_total_cost",
+  "column_break_gmszt",
+  "grand_total",
+  "unit_account_section",
+  "payment_schedule",
+  "section_break_axnjj",
+  "difference",
+  "column_break_yi7v8",
+  "column_break_alaep",
+  "booking_total",
+  "contract_total",
+  "installment_total",
+  "community_total",
+  "booking_grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking_information_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Information"
+  },
+  {
+   "fieldname": "booking_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Booking No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Plot No",
+   "options": "Plot List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Client Name",
+   "options": "Customer Realestate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tdph9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_date__bs_",
+   "fieldtype": "Data",
+   "label": "Booking Date ( BS ) (eg: dd-mm-yyyy)",
+   "reqd": 1,
+   "width": "10"
+  },
+  {
+   "fieldname": "shortkey",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "shortkey",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1lkwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "handover_date",
+   "fieldtype": "Date",
+   "label": "Handover Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "handover_date__bs_",
+   "fieldtype": "Data",
+   "label": "Handover Date ( BS )  (eg: dd-mm-yyyy)",
+   "reqd": 1,
+   "width": "10"
+  },
+  {
+   "fieldname": "booking_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Account Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Total Unit Cost",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "parking_cost",
+   "fieldtype": "Currency",
+   "label": "Parking Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "direction_premium_cost",
+   "fieldtype": "Currency",
+   "label": "Direction Premium Cost"
+  },
+  {
+   "fieldname": "column_break_faac9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "paint_premium_cost",
+   "fieldtype": "Currency",
+   "label": "Paint Premium Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "options": "Company:company:default_currency",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "_discount_on_total_cost",
+   "fieldtype": "Currency",
+   "label": "% Discount On Total Cost",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gmszt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_account_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_schedule",
+   "fieldtype": "Table",
+   "label": "Payment Schedule",
+   "options": "Installment Payment Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_axnjj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "This field must be zero (0)",
+   "fieldname": "difference",
+   "fieldtype": "Currency",
+   "label": "Difference  (Grand Total - Installment Total)",
+   "options": "Company:company:default_currency",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yi7v8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_alaep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "booking_total",
+   "fieldtype": "Currency",
+   "label": "Booking Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "contract_total",
+   "fieldtype": "Currency",
+   "label": "Contract Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "installment_total",
+   "fieldtype": "Currency",
+   "label": "Installment Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "community_total",
+   "fieldtype": "Currency",
+   "label": "Community Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "booking_grand_total",
+   "fieldtype": "Currency",
+   "label": "Booking Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2023-05-08 12:31:11.003653",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Housing Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Realestate Account Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "plot_no,client_name,booking_grand_total",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

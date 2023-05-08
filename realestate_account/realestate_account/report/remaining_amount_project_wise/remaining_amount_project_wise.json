@@ -1,0 +1,74 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "width": 0
+  },
+  {
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "label": "Booking Amount",
+   "width": 0
+  },
+  {
+   "fieldname": "booking_amount_now",
+   "fieldtype": "Currency",
+   "label": "Booking Amount Now",
+   "width": 0
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount",
+   "width": 0
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount",
+   "width": 0
+  },
+  {
+   "fieldname": "Total_Due_%",
+   "fieldtype": "Float",
+   "label": "Total Due %",
+   "width": 0
+  },
+  {
+   "fieldname": "Total_Due_%_Now",
+   "fieldtype": "Float",
+   "label": "Total Due % Now",
+   "width": 0
+  }
+ ],
+ "creation": "2023-04-04 10:52:05.345476",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "CE Construction",
+ "modified": "2023-05-08 14:08:04.289061",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Remaining Amount Project Wise",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "with project_list as (\r\n    select name,( select sum(amount) from `tabInstallment Payment Plan` where date <= curdate() and (select (select project_name from `tabPlot List` where name = `tabHousing Booking`.plot_no ) from `tabHousing Booking` where `tabHousing Booking`.name = `tabInstallment Payment Plan`.parent ) = `tabProject`.Name ) as BookingAmount,( select sum(amount) from `tabInstallment Payment Plan` where (select (select project_name from `tabPlot List` where name = `tabHousing Booking`.plot_no ) from `tabHousing Booking` where `tabHousing Booking`.name = `tabInstallment Payment Plan`.parent ) = `tabProject`.Name ) as BookingAmountNow,(select sum(grand_total) from `tabCustomer Payment Realestate` where project_name = `tabProject`.Name) as PaymentAmount from `tabProject` \r\n)\r\nselect name,BookingAmount,BookingAmountNow,PaymentAmount,BookingAmountNow - PaymentAmount,\r\n(\r\n    CASE WHEN ifnull(BookingAmountNow,0) = 0 THEN 0\r\n    WHEN ifnull(PaymentAmount,0) = 0 THEN 100\r\n    ELSE cast(((PaymentAmount/BookingAmount)*100) AS DECIMAL(5, 2)) END \r\n) as TotalPercent,\r\n(\r\n    CASE WHEN ifnull(BookingAmountNow,0) = 0 THEN 0\r\n    WHEN ifnull(PaymentAmount,0) = 0 THEN 100\r\n    ELSE cast(((PaymentAmount/BookingAmountNow)*100) AS DECIMAL(5, 2)) END \r\n) as TotalPercentNow\r\nfrom project_list  where (ifnull(BookingAmountNow,0) + ifnull(BookingAmount,0) + ifnull(PaymentAmount,0)) > 0",
+ "ref_doctype": "Housing Booking",
+ "report_name": "Remaining Amount Project Wise",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Realestate Account Manager"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "Particular",
+   "fieldtype": "Data",
+   "label": "Partucular",
+   "width": 550
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Currency",
+   "label": "Plan",
+   "options": "Company:company:default_currency",
+   "width": 200
+  },
+  {
+   "fieldname": "Actual",
+   "fieldtype": "Currency",
+   "label": "Actutal",
+   "options": "Company:company:default_currency",
+   "width": 200
+  },
+  {
+   "fieldname": "Variance",
+   "fieldtype": "Currency",
+   "label": "Variance",
+   "options": "Company:company:default_currency",
+   "width": 200
+  }
+ ],
+ "creation": "2023-03-20 21:42:17.304623",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project",
+   "mandatory": 1,
+   "options": "Project",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "options": "2070\n2071\n2072\n2073\n2074\n2075\n2076\n2077\n2078\n2079\n2080\n2081\n2082\n2083\n2084\n2085",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "options": "01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "mandatory": 1,
+   "options": "Booking\nContract\nInstallment\nCommunity Deposit",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "CE Construction",
+ "modified": "2023-05-08 14:08:24.050653",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Recovery Schedule",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "with housing_booking as (\r\n    select housing.name as \"name\",\r\n    housing.plot_no as \"plot_no\",\r\n    housing.client_name,\r\n    housing.booking_date__bs_,\r\n    housing_details.installment,\r\n    (select installment_type from `tabInstallment` where  installment_name = housing_details.installment ) as installment_type,\r\n    amount as \"Plan\",\r\n    (select sum(paid_amount) from `tabCustomer Payment Installment` ci where installment = housing_details.installment  and (select booking_no from `tabCustomer Payment Realestate` where receipt_no= parent) = housing.name) as \"Actual\",\r\n    0 as \"Variance\"\r\n    from `tabInstallment Payment Plan` as housing_details inner join `tabHousing Booking` housing on housing_details.parent = housing.name where housing_details.date  between  %(from_date)s and  %(to_date)s and (select installment_type from `tabInstallment` where  installment_name = housing_details.installment ) = %(status)s\r\n)\r\nselect CONCAT('Booking No : ',name,' (',booking_date__bs_,') ',' / ','Plot No : ',plot_no, ' (',client_name,')') ,sum(Plan),sum(Actual),ifnull(sum(Plan),0)- ifnull(sum(Actual),0) from housing_booking group by name",
+ "ref_doctype": "Customer Payment Realestate",
+ "report_name": "Recovery Schedule",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Realestate Account Manager"
+  }
+ ]
+}

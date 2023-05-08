@@ -1,0 +1,205 @@
+{
+ "charts": [
+  {
+   "chart_name": "Due % Project Wise",
+   "label": "Due % Project Wise"
+  }
+ ],
+ "content": "[{\"id\":\"WECnLkKvso\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Real Estate Recovery Schedule</span>\",\"col\":12}},{\"id\":\"OP72ok_SKn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Realestate Account Dashboard\",\"col\":4}},{\"id\":\"DR7sls1hwy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Due % Project Wise\",\"col\":12}},{\"id\":\"TU9lpHl2Qf\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":3}},{\"id\":\"Kp-qrjuKTu\",\"type\":\"card\",\"data\":{\"card_name\":\"Entry\",\"col\":3}},{\"id\":\"TRtwI0NYxt\",\"type\":\"card\",\"data\":{\"card_name\":\"Recovery Schedule\",\"col\":3}},{\"id\":\"AlAlZSorj2\",\"type\":\"card\",\"data\":{\"card_name\":\"Summary Reports\",\"col\":3}},{\"id\":\"JMwjjUrj4i\",\"type\":\"card\",\"data\":{\"card_name\":\"Detailed Report\",\"col\":4}}]",
+ "creation": "2023-02-28 17:19:14.760606",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "retail",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Realestate Account",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Entry",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Booking",
+   "link_count": 0,
+   "link_to": "Housing Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Payment",
+   "link_count": 0,
+   "link_to": "Customer Payment Realestate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Realestate Customer List",
+   "link_count": 0,
+   "link_to": "Customer Realestate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Plot / Unit List",
+   "link_count": 0,
+   "link_to": "Plot List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projects",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Installment",
+   "link_count": 0,
+   "link_to": "Installment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Recovery Schedule",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Recovery Schedule",
+   "link_count": 0,
+   "link_to": "Recovery Schedule",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Detailed Report",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Installment Wise Detail Receivable Report",
+   "link_count": 0,
+   "link_to": "Installment Wise Detail Receivable Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Summary Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Aging Report",
+   "link_count": 0,
+   "link_to": "Realestate Recovery Aging Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Forecast Report",
+   "link_count": 0,
+   "link_to": "Realestate Recovery Forecast",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Customer Booking & Payment Report",
+   "link_count": 0,
+   "link_to": "Customer Booking & Payment Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Wise Remaining",
+   "link_count": 0,
+   "link_to": "Remaining Amount Project Wise",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-05-08 13:16:15.843686",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Realestate Account",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Realestate Account Manager"
+  }
+ ],
+ "sequence_id": 33.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Realestate Account Dashboard",
+   "link_to": "Realestate Recovery",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Realestate Account"
+}

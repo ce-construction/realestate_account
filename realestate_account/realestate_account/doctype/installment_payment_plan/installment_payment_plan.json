@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-02 10:12:44.546199",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "installment",
+  "date",
+  "date_nepali",
+  "percentage",
+  "amount",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "installment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Installment",
+   "options": "Installment",
+   "reqd": 1,
+   "width": "30px"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_nepali",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date (Nepali) ( eg : dd-mm-yyyy)",
+   "length": 10,
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percentage",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-08 12:31:43.346806",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Installment Payment Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

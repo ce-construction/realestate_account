@@ -1,0 +1,46 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "Installment",
+   "fieldtype": "Link",
+   "label": "Installment",
+   "options": "Installment",
+   "width": 0
+  },
+  {
+   "fieldname": "Amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "Company:company:default_currency",
+   "width": 0
+  }
+ ],
+ "creation": "2023-03-31 15:49:55.400950",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "CE Construction",
+ "modified": "2023-05-08 14:07:45.399604",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Remaning Amount Installment Wise",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "with instalment_list as (\n    select (ROW_NUMBER() OVER (ORDER BY creation)) as rn,Installment_Name as \"Installment\",(select sum(amount) from `tabInstallment Payment Plan` where Installment =  `tabInstallment`.Installment_Name and date <= curdate()) - \n    ifnull((select sum(paid_amount) from `tabCustomer Payment Installment` where Installment =  `tabInstallment`.Installment_Name and \n    (select (select date from `tabInstallment Payment Plan` where parent = `tabCustomer Payment Realestate`.booking_no and Installment = `tabCustomer Payment Installment`.Installment )  from `tabCustomer Payment Realestate` where name = `tabCustomer Payment Installment`.parent)  \n    <=  curdate() ),0) as Amount from `tabInstallment` \n)\nselect replace(Installment,'1st','Contract') as Installment,Amount from instalment_list  where Amount > 0",
+ "ref_doctype": "Housing Booking",
+ "report_name": "Remaning Amount Installment Wise",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Realestate Account Manager"
+  }
+ ]
+}

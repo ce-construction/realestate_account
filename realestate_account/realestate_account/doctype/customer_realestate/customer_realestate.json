@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:client_name",
+ "creation": "2023-03-01 13:17:15.086813",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_tab",
+  "client_id",
+  "client_name",
+  "father_name",
+  "belonging_name",
+  "dfasdfasdf_column",
+  "customer_photo",
+  "grand_father_name",
+  "mother_name",
+  "remarks_section",
+  "remarks",
+  "contact_information_tab",
+  "cell_no",
+  "phone_no",
+  "alternative_contact_details",
+  "column_break_1_column",
+  "office_no",
+  "email_id",
+  "address",
+  "government_information_section",
+  "citizenship_no",
+  "pan_no",
+  "column_break_d8mxx",
+  "citizenship_photo",
+  "pan_no_photo"
+ ],
+ "fields": [
+  {
+   "fieldname": "overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "belonging_name",
+   "fieldtype": "Data",
+   "label": "Belonging's Name"
+  },
+  {
+   "fieldname": "dfasdfasdf_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_photo",
+   "fieldtype": "Attach Image",
+   "label": "Customer Photo"
+  },
+  {
+   "fieldname": "grand_father_name",
+   "fieldtype": "Data",
+   "label": "Grand Father Name"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother Name"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "contact_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "cell_no",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Cell No"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "alternative_contact_details",
+   "fieldtype": "Small Text",
+   "label": "Alternative Contact Details"
+  },
+  {
+   "fieldname": "column_break_1_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "office_no",
+   "fieldtype": "Data",
+   "label": "Office No"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "government_information_section",
+   "fieldtype": "Tab Break",
+   "label": "Government Information"
+  },
+  {
+   "fieldname": "citizenship_no",
+   "fieldtype": "Data",
+   "label": "Citizenship No"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "Pan No"
+  },
+  {
+   "fieldname": "column_break_d8mxx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "citizenship_photo",
+   "fieldtype": "Attach Image",
+   "label": "Citizenship Photo"
+  },
+  {
+   "fieldname": "pan_no_photo",
+   "fieldtype": "Attach Image",
+   "label": "Pan No Photo"
+  }
+ ],
+ "image_field": "customer_photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-08 12:29:32.440396",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Customer Realestate",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Realestate Account Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "client_name,cell_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

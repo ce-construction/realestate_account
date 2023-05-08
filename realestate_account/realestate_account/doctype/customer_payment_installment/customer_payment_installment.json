@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-02 12:11:38.382572",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "installment",
+  "receivable_amount",
+  "paid_amount",
+  "remaining_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "installment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Installment",
+   "options": "Installment",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "receivable_amount",
+   "fieldtype": "Currency",
+   "label": "Receivable Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-08 12:34:15.676052",
+ "modified_by": "Administrator",
+ "module": "Realestate Account",
+ "name": "Customer Payment Installment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
