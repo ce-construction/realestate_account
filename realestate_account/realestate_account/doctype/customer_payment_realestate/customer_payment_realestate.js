@@ -21,9 +21,11 @@ frappe.ui.form.on('Customer Payment Realestate', {
                  frm.refresh_field('plot_no');
                  
                  if (frm.is_new()){
-                    frappe.call('get_payment_list', { name: frm.doc.booking_no})
+                 console.log('test');
+                    frappe.call('realestate_account.realestate_account.doctype.customer_payment_realestate.api.get_payment_list', { name: frm.doc.booking_no})
                         .then(data => {
                             frm.clear_table("installment");
+                            console.log(data);
                             let i;
                             let receivable_total = 0 ;
                             for (i = 0; i < data.payment_list.length; i++) {
