@@ -35,16 +35,16 @@ frappe.ui.form.on('Housing Booking', {
         
         
         if (frm.is_new()){
-            frappe.call('get_installment_list')
+            frappe.call('realestate_account.realestate_account.doctype.housing_booking.housing_booking.get_installment_list')
             .then(data => {
                 frm.clear_table("payment_schedule");
-               
+                console.log(data.message);
                 let i;
               
-                for (i = 0; i < data.Installment_List.length; i++) {
+                for (i = 0; i < data.message.length; i++) {
                     var row = frm.add_child("payment_schedule");
-                    row.installment=data.Installment_List[i].installment_name;
-                    row.installment_type=data.Installment_List[i].installment_type;
+                    row.installment=data.message[i].installment_name;
+                    row.installment_type=data.message[i].installment_type;
                 }
                 
                

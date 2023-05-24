@@ -22,22 +22,22 @@ frappe.ui.form.on('Customer Payment Realestate', {
                  
                  if (frm.is_new()){
                  console.log('test');
-                    frappe.call('realestate_account.realestate_account.doctype.customer_payment_realestate.api.get_payment_list', { name: frm.doc.booking_no})
+                    frappe.call('realestate_account.realestate_account.doctype.customer_payment_realestate.customer_payment_realestate.get_payment_list', { name: frm.doc.booking_no})
                         .then(data => {
                             frm.clear_table("installment");
-                            console.log(data);
+                            console.log(data.message);
                             let i;
                             let receivable_total = 0 ;
-                            for (i = 0; i < data.payment_list.length; i++) {
-                                if(data.payment_list[i].receivable_amount > 0)
+                            for (i = 0; i < data.message.length; i++) {
+                                if(data.message[i].receivable_amount > 0)
                                 {
                                     var row = frm.add_child("installment");
-                                    row.installment=data.payment_list[i].Installment;
-                                    row.receivable_amount=data.payment_list[i].receivable_amount;
-                                    row.remaining_amount=data.payment_list[i].receivable_amount;
-                                    receivable_total = receivable_total + data.payment_list[i].receivable_amount;
+                                    row.installment=data.message[i].Installment;
+                                    row.receivable_amount=data.message[i].receivable_amount;
+                                    row.remaining_amount=data.message[i].receivable_amount;
+                                    receivable_total = receivable_total + data.message[i].receivable_amount;
                                 }
-                            } 
+                            }  
                             
                             frm.doc.total_remaining_balance  = receivable_total;
                             frm.refresh_fields("total_remaining_balance");
